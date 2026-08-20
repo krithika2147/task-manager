@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Krithika</title>
+
+    <link rel="stylesheet"
+          href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Krithika
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/#about">About</a>
+
+            <a href="/projects/">Projects</a>
+
+            <a href="/#skills">Skills</a>
+
+            <a href="/#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- PROJECT HEADER -->
+
+    <section class="projects-hero">
+
+        <h1>My Projects</h1>
+
+        <p>
+            A collection of projects I have created while
+            learning programming and web development.
+        </p>
+
+    </section>
+
+
+    <!-- PROJECT CARDS -->
+
+    <section class="projects-section">
+
+        <div class="projects-container">
+
+            {% for project in projects %}
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    💻
+                </div>
+
+                <div class="project-content">
+
+                    <h2>
+                        {{ project.name }}
+                    </h2>
+
+                    <p class="description">
+                        {{ project.description }}
+                    </p>
+
+                    <div class="technology">
+
+                        <strong>Technologies</strong>
+
+                        <span>
+                            {{ project.technology }}
+                        </span>
+
+                    </div>
+
+                    <a href="#"
+                       class="project-btn">
+                        View Project
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="no-projects">
+
+                <h2>No Projects Available</h2>
+
+                <p>
+                    Projects will be added soon.
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Krithika. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

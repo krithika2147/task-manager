@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    
+</head>
+
+<body>
+
+    <nav>
+        <h2 class="logo">Krithika</h2>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#about">About</a>
+            <a href="/projects/">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+
+        <h1>Hello, I'm <span>Krithika</span></h1>
+
+        <p>Computer Science Student | Future Full Stack Developer</p>
+
+<div class="buttons">
+
+   
+
+    <a href="#contact" class="btn">
+        Contact Me
+    </a>
+
+    <a href="/projects/" class="btn">
+        View My Projects
+    </a>
+
+</div>
+
+    </section>
+    <section id="about">
+
+    <h2>About Me</h2>
+
+    <p>
+        Hello! I'm Krithika, a Computer Science Engineering student.
+        I enjoy learning web development and building projects that solve real-world problems.
+        This portfolio was created as part of my internship to showcase my learning journey.
+    </p>
+    </section>
+    
+
+   <section id="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill">Java</div>
+        <div class="skill">Python</div>
+        <div class="skill">C</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+
+    </div>
+
+</section>
+
+    <section id="contact">
+
+      <h2>Contact Me</h2>
+
+    <p>I'd love to hear from you!</p>
+
+    <div class="contact-info">
+        <p>📧 Email: krithika@example.com</p>
+        <p>📱 Phone: +91 98765 43210</p>
+        <p>📍 Location: Chennai, India</p>
+    </div>
+    </section>
+
+</body>
+</html>
